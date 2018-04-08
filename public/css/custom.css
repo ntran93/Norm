@@ -1,0 +1,143 @@
+#main-nav {
+	margin-bottom: 0;
+	border-color: white;
+	background-color: white;
+	font-size: 20px;
+}
+
+#img-cat {
+	width: 30px;
+	padding-bottom: 10px;
+	padding-right: 5px;
+}
+
+#footer-img {
+	margin-left: 100px;
+}
+
+#main-link {
+	color: black;
+	font-size: 25px;
+}
+
+#nav-login {
+	color: black;
+	font-size: 15px;
+	background: none;
+	border: solid #BEBCBC;
+	border-width: 1px;
+	padding: 8px;
+}
+
+#nav-login:hover {
+	background: #F4F4F4;
+}
+
+#jumbo-header {
+	font-weight: bold;
+	font-size: 80px;
+}
+
+p {
+	font-size: 16px;
+}
+
+.jumbotron, #jumbotron-main {
+	color: white;
+	text-align: center;
+}
+
+.jumbotron, #jumbotron-search {
+	background-size: cover;
+	color: white;
+	font-weight: bold;
+}
+
+.jumbotron, #jumbotron-dash {
+	background-size: cover;
+	color: white;
+	font-weight: bold;
+}
+
+.jumbotron h1, #jumbotron-search {
+	font-weight: bold;
+}
+
+.jumbotron p {
+	color: white;
+	font-size: 26px;
+}
+
+#btn-start, #btn-find {
+	color: #fff;
+	background-color: transparent;
+	border-color: white;
+	margin-bottom: 5px;
+	width: 200px;
+}
+
+#btn-start:hover, #btn-find:hover {
+	color: #27A967;
+	background-color: white;
+	border-color: white;
+}
+
+#nav-dropdown {
+	background: none;
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+
+#user-photo {
+	width: 50px;
+	border-radius: 50%;
+}
+
+.card {
+	width: 100%;
+}
+
+.card-img-top {
+	padding-bottom: 10px;
+	height: 350px;
+}
+
+.card-block {
+	padding: 0px;
+}
+
+a[class^="btn"] {
+	width: 100%;
+	color: white;
+	margin-top: 10px;
+}
+
+img[class^="heart"] {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	height: 30px;
+}
+
+.icon {
+	margin-left: 5px;
+}
+
+.badge {
+	font-size: 11px;
+	color: #EEE;
+	background-color: #9D9C9C;
+	width: 15px;
+	margin-left: 15px;
+	margin-top: -5px;
+}
+
+.legend-icon {
+	max-width: 15px;
+}
+
+#dash-header {
+	padding-bottom: 10px;
+	text-align: center;
+}

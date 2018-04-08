@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norm</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<script type="text/javascript" src="js/auth.js"></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey : "AIzaSyDNdVFpZLzKFmpzpzJFLOHfBNf1cmG2epo",
+    authDomain : "norm-3018.firebaseapp.com",
+    databaseURL : "https://norm-3018.firebaseio.com",
+    projectId : "norm-3018",
+    storageBucket : "norm-3018.appspot.com",
+    messagingSenderId : "232152211914"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top" id="main-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <img src="img/cat.png" id="img-cat"> <a class="navbar-brand"
+          href="index.html" id="main-link">Norm</a>
+      </div>
+      <div id="div-login" style="display: inline;">
+        <button class="nav navbar-nav navbar-right btn-primary btn-lg"
+          id="nav-login" onclick="googleSignin();">Log
+          In</button>
+      </div>
+      <div id="div-loggedin" class="dropdown" style="display: none;">
+        <button class="nav navbar-nav navbar-right dropdown"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          id="nav-dropdown">
+          <img src="img/user.png" id="user-photo">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="index.html"
+            onclick="googleSignout();" id="nav-dropdown-item">Log Out</a> <a
+            class="dropdown-item" href="index.html" onclick=""
+            id="nav-dropdown-item">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron" id="jumbotron-main"
+    style="background-image: url(img/chalkboardBg.jpg)">
+    <div class="container">
+      <h1 id="jumbo-header">Ready. Set. Learn.</h1>
+      <p>Let your journey begin here.</p>
+      <br>
+      <p>
+        <a class="btn btn-primary btn-lg" href="#" role="button"
+          id="btn-start" onclick="googleSignin();" style="display: inline;">Get
+          Started »</a> 
+        <a class="btn btn-primary btn-lg" href="search.html" role="button"
+          id="btn-find" onclick="" style="display: none;">Find
+          Resources »</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <img src="img/user.png">
+        <h3>Learning, Your Way</h3>
+        <p>Choose how you want to learn based on the teaching methods
+          that work best for you.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="img/book-open.png">
+        <h3>Track Your Progress</h3>
+        <p>Add finished lessons to your progress board and watch your
+          programming knowledge grow.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="img/walking.png">
+        <h3>Pave The Way</h3>
+        <p>Save the sites that you like most. The same path may help a
+          friend seeking to learn in the future.</p>
+      </div>
+    </div>
+  </div>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md" id="footer-img">
+        <img class="mb-2" src="img/cat.png" alt="" width="30"> <small
+          class="d-block mb-3 text-muted">© 2018</small>
+      </div>
+      <div class="col-6 col-md"></div>
+      <div class="col-6 col-md"></div>
+      <div class="col-6 col-md">
+        <h5>Navigation</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="search.html">Resources</a></li>
+          <li><a class="text-muted" href="logged_in.html">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

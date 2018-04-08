@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Norm</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/custom.css" rel="stylesheet">
+<script type="text/javascript" src="js/auth.js"></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.9.0/firebase-auth.js"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey : "AIzaSyDNdVFpZLzKFmpzpzJFLOHfBNf1cmG2epo",
+    authDomain : "norm-3018.firebaseapp.com",
+    databaseURL : "https://norm-3018.firebaseio.com",
+    projectId : "norm-3018",
+    storageBucket : "norm-3018.appspot.com",
+    messagingSenderId : "232152211914"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+<body>
+  <nav class="navbar navbar-inverse navbar-static-top" id="main-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <img src="img/cat.png" id="img-cat"> <a class="navbar-brand"
+          href="index.html" id="main-link">Norm</a>
+      </div>
+      <div class="dropdown">
+        <button class="nav navbar-nav navbar-right dropdown"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          id="nav-dropdown">
+          <img src="img/user.png" id="user-photo">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="index.html"
+            onclick="googleSignout();" id="nav-dropdown-item">Log Out</a> <a
+            class="dropdown-item" href="index.html" onclick=""
+            id="nav-dropdown-item">Dashboard</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron" id="jumbotron-dash"
+    style="background-image: url(img/chalkboardBg.jpg)">
+    <div class="container">
+      <h1 id="jumbo-header">Ready. Set. Learn.</h1>
+      <p>The resources are here. All you need to do is start.</p>
+      <br>
+      <p id="start">
+        <a class="btn btn-primary btn-lg" href="search.html" role="button"
+          id="btn-start" onclick="">Find Resources »</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="dash-container">
+    <div id="dash-header">
+      <h1 class="display-4">Your Resources</h1>
+    </div>
+    <div class="container" id="resource-container">
+      <div class="card-deck">
+        <div class="card">
+          <img id="img1" class="card-img-top" src="img/cat.png"
+            alt="Card image cap" onload=""> <img id="icon2"
+            class="heart" src="img/heart-icon.png"
+            onclick="saveAsFav(this.id);">
+          <div class="card-block d-flex flex-column">
+            <h4 id="title1" class="card-title">Card title</h4>
+            <span class="badge" role="button" data-container="body"
+              data-toggle="popover" data-placement="right" data-trigger="hover"
+              data-html="true"
+              data-content="
+            <img src='img/free.png'> - Free to use <br>
+            <img src='img/pay.png'> - Pay to use <br>
+            <img src='img/game.png'> - Game-based learning <br>
+            <img src='img/video.png'> - Video-based lessons <br>
+            <img src='img/practice.png'> - Good for coding practice <br>
+            <img src='img/cert.png'> - Certifiable courses">
+              ? </span>
+            <p id="text1" class="card-text">Some quick example text to
+              build on the card title and make up the bulk of the card's
+              content.</p>
+            <a id="url1" href="#"
+              class="btn btn-primary btn-lg btn-block text-truncate mt-auto">Visit
+              page</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img id="img2" class="card-img-top" src="img/cat.png"
+            alt="Card image cap" onload=""> <img id="icon2"
+            class="heart" src="img/heart-icon.png">
+          <div class="card-block">
+            <h4 id="title2" class="card-title">Card title</h4>
+            <span class="badge" role="button" data-container="body"
+              data-toggle="popover" data-placement="right" data-trigger="hover"
+              data-html="true"
+              data-content="
+            <img src='img/free.png'> - Free to use <br>
+            <img src='img/pay.png'> - Pay to use <br>
+            <img src='img/game.png'> - Game-based learning <br>
+            <img src='img/video.png'> - Video-based lessons <br>
+            <img src='img/practice.png'> - Good for coding practice <br>
+            <img src='img/cert.png'> - Certifiable courses">
+              ? </span>
+            <p id="text2" class="card-text">Some quick example text to
+              build on the card title and make up the bulk of the card's
+              content.</p>
+            <a id="url2" href="#"
+              class="btn btn-primary btn-lg btn-block text-truncate mt-auto">Visit
+              page</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <img id="img3" class="card-img-top" src="img/cat.png"
+            alt="Card image cap" onload=""> <img id="icon3"
+            class="heart" src="img/heart-icon.png">
+          <div class="card-block">
+            <h4 id="title3" class="card-title">Card title</h4>
+            <span class="badge" role="button" data-container="body"
+              data-toggle="popover" data-placement="right" data-trigger="hover"
+              data-html="true"
+              data-content="
+            <div class='legend-icon'><img src='img/free.png'></div> - Free to use <br>
+            <div class='legend-icon'><img src='img/pay.png'></div> - Pay to use <br>
+            <div class='legend-icon'><img src='img/game.png'></div> - Game-based learning <br>
+            <div class='legend-icon'><img src='img/video.png'></div> - Video-based lessons <br>
+            <div class='legend-icon'><img src='img/practice.png'></div> - Good for coding practice <br>
+            <div class='legend-icon'><img src='img/cert.png'></div> - Certifiable courses">
+              ? </span>
+            <p id="text3" class="card-text">Some quick example text to
+              build on the card title and make up the bulk of the card's
+              content.</p>
+            <a id="url3" href="#"
+              class="btn btn-primary btn-lg btn-block text-truncate mt-auto">Visit
+              page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+    <div class="row">
+      <div class="col-12 col-md" id="footer-img">
+        <img class="mb-2" src="img/cat.png" alt="" width="30"> <small
+          class="d-block mb-3 text-muted">© 2018</small>
+      </div>
+      <div class="col-6 col-md"></div>
+      <div class="col-6 col-md"></div>
+      <div class="col-6 col-md">
+        <h5>Navigation</h5>
+        <ul class="list-unstyled text-small">
+          <li><a class="text-muted" href="search.html">Resources</a></li>
+          <li><a class="text-muted" href="#">Dashboard</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
